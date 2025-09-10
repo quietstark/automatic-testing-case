@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-09-10T06:29:28.719Z",
+    "end": "2025-09-10T06:29:38.098Z",
+    "duration": 9379,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "70959246-010b-4c3a-8ac7-69d002661350",
+      "title": "",
+      "fullFile": "cypress\\e2e\\kong\\createEntitles.cy.js",
+      "file": "cypress\\e2e\\kong\\createEntitles.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "93cbc984-d6e7-4bd5-8fed-6fbd8b28ce0a",
+          "title": "createEntitles",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "checkWorkSpaces",
+              "fullTitle": "createEntitles checkWorkSpaces",
+              "timedOut": null,
+              "duration": 2034,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.last-row > :nth-child(1)').should('exist').and('be.visible');",
+              "err": {},
+              "uuid": "8cb3dad7-9f63-4774-b017-cd4c9a3cb917",
+              "parentUUID": "93cbc984-d6e7-4bd5-8fed-6fbd8b28ce0a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "creatEntitles",
+              "fullTitle": "createEntitles creatEntitles",
+              "timedOut": null,
+              "duration": 5548,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "gateway.enterWorkSpace('default');\ngateway.gotoSidebar('gateway-services');\ngateway.enterService(config.srvName);\ngateway.gatewayServiceAction(config.gatewayServiceAction);\ngateway.createEntitles(config);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-testid=\"1\"] > [data-testid=\"name\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-testid=\"1\"] > [data-testid=\"name\"]`, but never found it.\n    at Object.enterService (webpack://cypress_code/./cypress/e2e/kong/gatewayActions.js:405:5)\n    at Context.eval (webpack://cypress_code/./cypress/e2e/kong/createEntitles.cy.js:32:16)",
+                "diff": null
+              },
+              "uuid": "7b82fe40-e685-49ad-99fb-901a5a51d977",
+              "parentUUID": "93cbc984-d6e7-4bd5-8fed-6fbd8b28ce0a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8cb3dad7-9f63-4774-b017-cd4c9a3cb917"
+          ],
+          "failures": [
+            "7b82fe40-e685-49ad-99fb-901a5a51d977"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7582,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

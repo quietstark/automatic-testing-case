@@ -1,0 +1,17 @@
+1.新建一个服务，新建一个route
+2.过程填写的值需要参数化，从外部可以设置
+3.模块化，不同配置用不同的js
+4.过程中的细节，需要对按钮、输入框进行测试，例如边界值、极限值、错误值等等，异常流也需要测试
+
+
+
+
+可见性：be.visible, not.be.visible
+
+存在性：exist, not.exist
+
+状态：be.checked, be.disabled, be.enabled
+
+属性：have.value, have.text, have.attr, have.class
+
+集合：have.length, contain, deep.equal

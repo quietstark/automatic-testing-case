@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-10T06:30:30.807Z",
+    "end": "2025-09-10T06:30:39.720Z",
+    "duration": 8913,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6105c490-8488-417d-803d-e4eb0d2b7fa8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\kong\\1_createNewService.cy.js",
+      "file": "cypress\\e2e\\kong\\1_createNewService.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cc45a09e-244d-4577-ac9d-8221c5ae5ffe",
+          "title": "createNewService",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "checkWorkSpaces",
+              "fullTitle": "createNewService checkWorkSpaces",
+              "timedOut": null,
+              "duration": 1690,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.last-row > :nth-child(1)').should('exist').and('be.visible');",
+              "err": {},
+              "uuid": "ba0677b8-2317-4de6-93b6-efdc1fddc334",
+              "parentUUID": "cc45a09e-244d-4577-ac9d-8221c5ae5ffe",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "createNewGatewayService",
+              "fullTitle": "createNewService createNewGatewayService",
+              "timedOut": null,
+              "duration": 5416,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "gateway.enterWorkSpace('default');\ngateway.gotoSidebar('gateway-services');\n// gateway.uploadCertificates('gateway-services')\n// gateway.uploadCACertificates('gateway-services')\ngateway.addNewGatewayService(config);",
+              "err": {},
+              "uuid": "a2cec211-27f2-4307-ace5-403fad9ad3f1",
+              "parentUUID": "cc45a09e-244d-4577-ac9d-8221c5ae5ffe",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ba0677b8-2317-4de6-93b6-efdc1fddc334",
+            "a2cec211-27f2-4307-ace5-403fad9ad3f1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7106,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

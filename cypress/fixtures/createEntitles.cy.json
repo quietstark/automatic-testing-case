@@ -1,0 +1,19 @@
+{
+  "srvName": "1",
+  "gatewayServiceAction": "addRoute",
+  "name": "11",
+  "tag": "11",
+  "routeMode": "basic",
+  "path": "/test",
+  "method": ["GET", "PUT", "POST", "OPTIONS"],
+  "stripPath": false,
+  "host": "quiet.com",
+
+  "nameDefault": "",
+  "protocolDefault": "1httphttps",
+  "hostDefault": "",
+  "methodDefault": "",
+  "pathDefault": "",
+  "tagDefault": ""
+
+}

@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-10T06:30:41.746Z",
+    "end": "2025-09-10T06:30:48.188Z",
+    "duration": 6442,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "490dd443-02a7-41d5-a0eb-367653ace295",
+      "title": "",
+      "fullFile": "cypress\\e2e\\kong\\2_createEntitles.cy.js",
+      "file": "cypress\\e2e\\kong\\2_createEntitles.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7493e612-c067-48a9-8097-40276f63cc9f",
+          "title": "createEntitles",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "checkWorkSpaces",
+              "fullTitle": "createEntitles checkWorkSpaces",
+              "timedOut": null,
+              "duration": 1233,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.last-row > :nth-child(1)').should('exist').and('be.visible');",
+              "err": {},
+              "uuid": "846f21b5-d09f-4c65-a3f8-afead5fd766d",
+              "parentUUID": "7493e612-c067-48a9-8097-40276f63cc9f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "creatEntitles",
+              "fullTitle": "createEntitles creatEntitles",
+              "timedOut": null,
+              "duration": 3841,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "gateway.enterWorkSpace('default');\ngateway.gotoSidebar('gateway-services');\ngateway.enterService(config.srvName);\ngateway.gatewayServiceAction(config.gatewayServiceAction);\ngateway.createEntitles(config);",
+              "err": {},
+              "uuid": "c64c7206-9fde-4d10-a95d-894d7109cef1",
+              "parentUUID": "7493e612-c067-48a9-8097-40276f63cc9f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "846f21b5-d09f-4c65-a3f8-afead5fd766d",
+            "c64c7206-9fde-4d10-a95d-894d7109cef1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5074,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

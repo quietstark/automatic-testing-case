@@ -1,0 +1,22 @@
+// 执行顺序：before -> beforeEach -> 用例一 -> afterEach -> beforeEach -> 用例二 -> afterEach -> after
+
+describe('测试集',function (){
+    before(()=>{
+        cy.log('我是before')
+    })
+    after(()=>{
+        cy.log('我是after')
+    })
+    beforeEach(()=>{
+        cy.log('我是beforeEach')
+    })
+    afterEach(()=>{
+        cy.log('我是afterEach')
+    })
+    it('测试用例一', function () {
+        cy.log('测试用例一1111')
+    })
+    it('测试用例二', function () {
+        cy.log('测试用二2222')
+    })
+})
