@@ -1,0 +1,31 @@
+name: Cypress CI Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  cypress-run:
+    runs-on: self-hosted
+
+    steps:
+
+      - name: Run Cypress tests
+        run: npx cypress run --reporter mochawesome
+
+      - name: Generate Mochawesome Report
+        run: |
+          npx mochawesome-merge cypress/reports/*.json > cypress/reports/report.json
+          npx mochawesome-report-generator cypress/reports/report.json
+
+      - name: Upload Cypress Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-artifacts
+          path: |
+            cypress/screenshots/**
+            cypress/videos/**
+            cypress/reports/**
