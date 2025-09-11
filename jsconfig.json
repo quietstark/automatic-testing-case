@@ -3,6 +3,6 @@
         "baseUrl": "./",
         "types": ["cypress"]
     },
-    "include": ["cypress/**/*.js", "cypress/e2e/kong/test.cy.js"]
+    "include": ["cypress/**/*.js", "cypress/e2e/kong/test.js"]
     
 }
