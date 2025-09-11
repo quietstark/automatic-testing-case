@@ -1,5 +1,10 @@
 # automatic-testing-case
-For KONG gateway
+For KONG gateway  
+### Design Ideas
+For the flexibility, I used mulitiple json file in the ./fixture to set the parameters that might be used in the process of creating service and entitles.  
+I put the gateway actions(such as enterWorkSpace, createEntitles, addNewGatewayService) into gatewayActions.js, and the main case(1_createNewService.cy.js, etc) was simply invoke these actions to finish the task.  
+NOTICE, there might be an error during the run, because the service name was settled and the gateway requires a unique name for each service, so the service name need to be changed before every test, and this is a flaw need to be fixed in the future.
+
 
 ### 1. prepare the environment
 node.js version: v22.19.0  
