@@ -1,0 +1,53 @@
+name: Cypress CI Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    env:
+      CYPRESS_baseUrl: http://192.168.56.135:8002   # 根据你的环境改
+
+    steps:
+      # 1️⃣ 获取代码
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2️⃣ 安装 Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # 3️⃣ 安装依赖
+      - name: Install dependencies
+        run: npm ci
+
+      # 4️⃣ 安装 Cypress
+      - name: Install Cypress
+        run: npx cypress install
+
+      # 5️⃣ 运行 Cypress 测试
+      - name: Run Cypress tests
+        run: npx cypress run --reporter mochawesome
+
+      # 6️⃣ 合并并生成 HTML 报告
+      - name: Generate Mochawesome Report
+        run: |
+          npx mochawesome-merge cypress/reports/*.json > cypress/reports/report.json
+          npx mochawesome-report-generator cypress/reports/report.json
+
+      # 7️⃣ 上传截图、视频、报告作为 Artifact
+      - name: Upload Cypress Artifacts
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-artifacts
+          path: |
+            cypress/screenshots/**
+            cypress/videos/**
+            cypress/reports/**
