@@ -24,7 +24,7 @@
   "caCertificatesDefault": " – ",
   "tlsVerifyDefault": "Use default system setting",
 
-  "name": "2",
+  "name": "1",
   "tagFlag": true,
   "tag": "test-tag",
   "tagDefault": " – "
