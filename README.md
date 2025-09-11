@@ -17,9 +17,21 @@ npm version: 10.9.3
 #### customize the fixture/createNewService.cy.json, fixture/createEntitles.cy.json to create in different parameters
 
 ### 3. run
-#### run in local
+#### **run in local**
 ```
 npx cypress open
 ```
-#### run in GitHub Actions
+#### **run in GitHub Actions**
+go to repository->Actions
+
+### 4. test report
+#### **run in local**
+```
+# run the test and report
+npx cypress run --reporter mochawesome
+
+# run the test and report with screenshot and video
+npx cypress run --reporter cypress-mochawesome-reporter
+```
+#### **run in GitHub Actions**
 go to repository->Actions
